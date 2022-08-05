@@ -26,8 +26,8 @@ router.post("/", (req, res) => {
 router.delete("/:id", (req, res) => {
   Comment.destroy({
     where: {
-      id: req.params.id,
-    },
+      id: req.params.id
+    }
   })
     .then(dbCommentData => {
       if (!dbCommentData) {
